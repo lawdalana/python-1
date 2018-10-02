@@ -10,3 +10,12 @@ fr = open('sample.txt', 'r')
 text = fr.read()
 print(text)
 fr.close
+
+
+with open('sample.txt', 'r', encoding='utf8') as fr:
+	for line in fr:
+		print(line)
+
+with open('sample.txt', 'w', encoding='utf8') as fw:
+	line = 'Write sample!'
+	fw.write(line)
